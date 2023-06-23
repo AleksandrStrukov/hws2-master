@@ -1,18 +1,28 @@
 .sendForm {
-
+    ;
 }
 
 .textarea {
+
 
 }
 
 .button {
 
+    top:100%;
+    background-color:dodgerblue;
+    color: white;
+    border:none;
+    border-radius:10px;
+    min-height: 20px;
+    min-width: 100px;
+    flex-direction: row-reverse;
+
 }
 
 .button:hover {
-
+    color: white;
 }
 .button:active {
-
+    color: purple;
 }
