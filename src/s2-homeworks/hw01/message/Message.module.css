@@ -17,9 +17,6 @@
 .imageAndText img {
     height: 40px;
     padding-left: 10px;
-
-
-
 }
 
 .text {
@@ -32,18 +29,19 @@
     border-radius:10px;
     border-end-end-radius: 0px;
     text-align: -webkit-right;
-    z-index: -1;
 }
 
 .text:after {
     content: '';
-    position: absolute;
+    display: flex;
+    position: relative;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid dodgerblue;
-    top:58px;
+    top:5px;
+    left: 20px;
 }
 
 .name {
