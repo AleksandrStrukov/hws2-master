@@ -23,7 +23,7 @@ type messageType = {
     text: string
     time: string
 }
-export type MessageType = {
+type MessageType = {
     id:number
     user: userType
     message: messageType
@@ -38,7 +38,7 @@ export const message0: MessageType = {
         name: 'Sara Conor',  // можно менять
     },
     message: {
-        text: 'There is the first homework in this project!', // можно менять
+        text: 'Some text!', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -46,10 +46,10 @@ export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        name: 'John', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
+        text: 'Hi', // можно менять
         time: '22:00', // можно менять
     },
 }

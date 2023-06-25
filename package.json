@@ -1,6 +1,6 @@
 {
   "name": "hws2",
-  "homepage": "https://github.com/AleksandrStrukov/hws2-master",
+  "homepage": "https://AleksandrStrukov.github.io/hws2-master",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,7 +34,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
