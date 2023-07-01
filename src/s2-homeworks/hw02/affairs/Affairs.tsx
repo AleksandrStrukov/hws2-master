@@ -3,9 +3,9 @@ import Affair from './affair/Affair'
 import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
-type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
+export type AffairsPropsType = {
+    data: void // need to fix any
+    setFilter: FilterType
     deleteAffairCallback: any
     filter: FilterType
 }
