@@ -9,10 +9,10 @@ import s2 from '../../s1-main/App.module.css'
 * 4 - выполнить пункт 3 для функции deleteAffair+
 * 5 - указать нужный тип в useState с affairs+
 * 6 - дописать тип и логику функции deleteAffairCallback+
-* 7 - в файле Affairs.tsx дописать типизацию пропсов
+* 7 - в файле Affairs.tsx дописать типизацию пропсов+
 * 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
-* 9 - в файле Affair.tsx дописать типизацию пропсов
-* 10 - в файле Affair.tsx дописать функции deleteCallback и использовать
+* 9 - в файле Affair.tsx дописать типизацию пропсов+
+* 10 - в файле Affair.tsx дописать функции deleteCallback и использовать+
 * 11 - в файле Affair.tsx отобразить приходящие данные
 * */
 
@@ -26,7 +26,7 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: Array<AffairType> = [ // need to fix any
+export const defaultAffairs: Array<AffairType> = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -35,7 +35,10 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
+    if(filter =='all'){
+        return defaultAffairs
+    }
      return defaultAffairs.filter(a => a.priority === filter);
 }
 

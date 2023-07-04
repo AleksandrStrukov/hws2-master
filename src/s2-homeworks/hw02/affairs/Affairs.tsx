@@ -1,6 +1,6 @@
 import React from 'react'
 import Affair from './affair/Affair'
-import {AffairType, FilterType} from '../HW2'
+import {AffairType, defaultAffairs, filterAffairs, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
 export type AffairsPropsType = {
@@ -12,16 +12,16 @@ export type AffairsPropsType = {
 
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
-        // need to fix
+        props.setFilter('all')
     }
     const setHigh = () => {
-        // need to fix
+        props.setFilter('high');// need to fix
     }
     const setMiddle = () => {
-        // need to fix
+        props.setFilter('middle');// need to fix
     }
     const setLow = () => {
-        // need to fix
+        props.setFilter('low');// need to fix
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
