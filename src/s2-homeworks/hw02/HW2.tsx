@@ -8,7 +8,7 @@ import s2 from '../../s1-main/App.module.css'
 * 3 - дописать типы+ и логику функции filterAffairs и проверить её тестами+
 * 4 - выполнить пункт 3 для функции deleteAffair+
 * 5 - указать нужный тип в useState с affairs+
-* 6 - дописать тип и логику функции deleteAffairCallback
+* 6 - дописать тип и логику функции deleteAffairCallback+
 * 7 - в файле Affairs.tsx дописать типизацию пропсов
 * 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
 * 9 - в файле Affair.tsx дописать типизацию пропсов
@@ -35,21 +35,23 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType, filter: FilterType): void => { // need to fix any
-    defaultAffairs.map((a) => a.name)
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
+     return defaultAffairs.filter(a => a.priority === filter);
 }
 
-export const deleteAffair = (affairs: AffairType, _id: number): MouseEventHandler<HTMLButtonElement> => { // need to fix any
-    return (props.deleteAffairCallback(affairs._id));
+export const deleteAffair = (affairs: Array<AffairType>, _id: number):Array<AffairType> => { // need to fix any
+    let AffaiarsAfterRemove = defaultAffairs.filter( a => a._id !== _id);
+    return AffaiarsAfterRemove;
 }
 
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) // need to fix any
-    const [filter, setFilter] = useState<Array<FilterType>>('all')
+    const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => { // need to fix any
-        defaultAffairs.filter( a => a._id !== _id);
+       const newArr= deleteAffair(affairs,_id)
+        setAffairs(newArr)
     }
 
     return (
