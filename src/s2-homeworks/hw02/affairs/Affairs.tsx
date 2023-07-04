@@ -4,8 +4,8 @@ import {AffairType, defaultAffairs, filterAffairs, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
 export type AffairsPropsType = {
-    data:Array<AffairType> // need to fix any
-    setFilter: (filter:FilterType) => void
+    data: Array<AffairType> // need to fix any
+    setFilter: (filter: FilterType) => void
     deleteAffairCallback: (_id: number) => void
     filter: FilterType
 }

@@ -36,14 +36,14 @@ export let defaultAffairs: Array<AffairType> = [ // need to fix any
 
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
-    if(filter ==='all'){
+    if (filter === 'all') {
         return defaultAffairs
     }
-     return defaultAffairs.filter(a => a.priority === filter);
+    return defaultAffairs.filter(a => a.priority === filter);
 }
 
-export const deleteAffair = (affairs: Array<AffairType>, _id: number):Array<AffairType> => { // need to fix any
-    defaultAffairs = defaultAffairs.filter( a => a._id !== _id);
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
+    defaultAffairs = defaultAffairs.filter(a => a._id !== _id);
     return defaultAffairs;
 }
 
@@ -53,7 +53,7 @@ function HW2() {
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => { // need to fix any
-       const newArr= deleteAffair(affairs,_id)
+        const newArr = deleteAffair(affairs, _id)
         setAffairs(newArr)
     }
 
