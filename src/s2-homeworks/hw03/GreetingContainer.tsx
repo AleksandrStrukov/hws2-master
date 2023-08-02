@@ -58,7 +58,15 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-        pureOnEnter(e, addUser)
+        if (!name && e.key === 'Enter') {
+            name && setName('')
+            setError('name is false')
+
+        } else {
+            pureOnEnter(e, addUser)
+        }
+
+
     }
 
 
