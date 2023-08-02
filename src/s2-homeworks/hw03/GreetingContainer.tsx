@@ -13,7 +13,7 @@ export const pureAddUser = (name:string , setError: (error:string)=>void, setNam
     addUserCallback(name);
 }
 
-export const pureOnBlur = (name: string, setError: (error:string)=>void) => { if (name.trim() === '') {
+export const pureOnBlur = (name: string, setError: (error:string)=>void) => { if (name === '') {
     setError('message is not right')
 }// если имя пустое - показать ошибку
 }
@@ -38,7 +38,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // need to fix any
-        const trimmedName = e.currentTarget.value.trim()
+        const trimmedName = e.currentTarget.value
         if (trimmedName) {
             setName(trimmedName);
             error && setError('')
