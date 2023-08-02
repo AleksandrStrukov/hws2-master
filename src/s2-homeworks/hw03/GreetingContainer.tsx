@@ -8,8 +8,9 @@ type GreetingContainerPropsType = {
     addUserCallback: (name:string)=>void // need to fix any
 }
 
-export const pureAddUser = (name:string , setError: (error:string)=>void, setName: (name:string)=>void, AddUserCallback: (name: string)=>void) => {
+export const pureAddUser = (name:string , setError: (error:string)=>void, setName: (name:string)=>void, addUserCallback: (name: string)=>void) => {
     setName('');
+    addUserCallback(name);
 }
 
 export const pureOnBlur = (name: string, setError: (error:string)=>void) => { if (name.trim() === '') {
@@ -19,8 +20,7 @@ export const pureOnBlur = (name: string, setError: (error:string)=>void) => { if
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: ()=>void) => {
     if (e.key === 'Enter' && addUser.name) {
-        addUser()
-    }
+        addUser()    }
     // если нажата кнопка Enter - добавить
 }
 
@@ -48,6 +48,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         }
     }
     const addUser = () => {
+        // addUserCallback(name)
         pureAddUser(name, setError, setName, addUserCallback)
         setName('')
     }
@@ -60,9 +61,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnEnter(e, addUser)
     }
 
-    // let LName = users.map(g=>g.name);
+
     const totalUsers = users.length// need to fix
-    const lastUserName = name;// need to fix
+    let NName = users.map(n=>n.name);
+    const lastUserName = NName[NName.length-1];// need to fix
 
     return (
         <Greeting
