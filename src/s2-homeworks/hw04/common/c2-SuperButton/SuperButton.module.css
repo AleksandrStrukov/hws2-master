@@ -1,36 +1,64 @@
 .button {
+    position: relative;
+    margin: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #00cc22;
+    color: #0066cc;
 }
 
 .disabled {
+    color: purple;
+    background-color: #00cc22;
 }
 
 .secondary {
+    background: yellow;
 }
 
 .default {
+    background: #0066cc;
+    color: yellowgreen;
+    outline: none;
 }
 
 .red {
+    background: #cc0000;
 }
 
 .default:hover {
+    background: #00cc22;
+    color: #0066cc;
+
 }
 
 .red:hover {
+    background: #00cc22;
+    color: #0066cc;
 }
 
 .secondary:hover {
+    background: #00cc22;
+    color: #0066cc;
 }
 
 
 .default:active {
+    background: #00cc22;
+    color: #0066cc;
 }
 
 .secondary:active {
+    background: #00cc22;
+    color: #0066cc;
 }
 
 .red:active {
+    background: #00cc22;
+    color: #0066cc;
 }
 
 .button:disabled {
+    color: #cc9c00;
+    cursor: auto;
 }
