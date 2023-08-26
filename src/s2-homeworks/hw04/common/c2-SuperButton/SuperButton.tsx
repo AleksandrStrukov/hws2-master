@@ -7,7 +7,7 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
     HTMLButtonElement>
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
-    xType?: string
+    xType?: 'red' | 'disabled' | 'secondary'
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
