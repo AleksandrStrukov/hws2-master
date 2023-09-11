@@ -1,25 +1,96 @@
+/*.sidebar {*/
+
+/*}*/
+
+/*.sidebar.open {*/
+/*}*/
+
+/*.background {*/
+/*}*/
+
+/*.nav {*/
+/*}*/
+
+/*.nav a {*/
+/*}*/
+
+/*.nav a:hover {*/
+/*}*/
+
+/*.nav a.active {*/
+
+/*}*/
+/*.close {*/
+/*}*/
+
+/*.close img {*/
+/*}*/
+
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
 }
 
+/* Sidebar when open */
 .sidebar.open {
+    left: 0;
 }
 
+/* Background overlay */
 .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
+/* Close button */
+.close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Close button icon */
+.close img {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+/* Navigation links */
 .nav {
+    margin-top: 60px; /* Adjust as needed */
+    padding: 0 20px;
+    list-style: none;
 }
 
 .nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.nav a:hover {
-}
-
+/* Active link */
 .nav a.active {
-}
-.close {
+    background-color: #555;
 }
 
-.close img {
+/* Hover effect */
+.nav a:hover {
+    background-color: #555;
 }
