@@ -1,4 +1,6 @@
 .spanBlock {
+background-color: #cc0000;
+    color: yellow;
 
 }
 
@@ -12,5 +14,6 @@
 }
 
 .pen {
+    color: dodgerblue;
 
 }
