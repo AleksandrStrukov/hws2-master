@@ -1,0 +1,16 @@
+.select {
+    width: 100px;
+    padding: 4px;
+    padding-right: 4px;
+}
+
+.select:focus {
+    outline: none;
+    border: #cc0000 solid 3px;
+}
+
+
+.option:hover {
+
+    color: #cc0000;
+}

@@ -1,0 +1,29 @@
+.radio {
+   cursor: pointer;
+    background-color: yellow;
+}
+
+.radio::before {
+    color: #00cc22;
+    border: #0066cc;
+
+}
+
+
+.radio:checked::before {
+    color: #00cc22;
+    border: #0066cc;
+    background-color: purple;
+
+}
+
+.label {
+    cursor: pointer;
+
+}
+
+.options {
+    color: #00cc22;
+    border: #0066cc;
+
+}
