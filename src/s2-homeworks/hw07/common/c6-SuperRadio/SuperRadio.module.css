@@ -4,16 +4,16 @@
 }
 
 .radio::before {
-    color: #00cc22;
-    border: #0066cc;
+    /*color: #00cc22;*/
+    /*border: #0066cc;*/
 
 }
 
 
 .radio:checked::before {
-    color: #00cc22;
-    border: #0066cc;
-    background-color: purple;
+    /*color: #00cc22;*/
+    /*border: #0066cc;*/
+    /*background-color: purple;*/
 
 }
 
