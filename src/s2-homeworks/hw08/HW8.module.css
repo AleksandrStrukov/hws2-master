@@ -1,0 +1,43 @@
+.item {
+color: red;
+    background-color: yellowgreen;
+    column-gap: 50px;
+
+}
+
+.item:last-of-type {
+
+
+}
+
+.users {
+    table-layout: auto;
+    width: 200px;
+    column-rule: 2px solid purple
+}
+
+.buttonsContainer {
+    border-radius: 5px;
+    color: green;
+}
+
+.container {
+    color: green;
+}
+
+.thead {
+    color: #0066cc;
+    background-color: purple;
+}
+
+.nameCol {
+    table-layout: fixed;
+    width: 20px;
+
+}
+
+.ageCol {
+    table-layout: fixed;
+    width: 20px;
+    color: #0059b3;
+}
