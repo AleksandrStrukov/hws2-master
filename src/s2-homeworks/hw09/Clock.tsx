@@ -15,7 +15,7 @@ function Clock() {
         setTimerId(undefined)
     }
 
-    const Start = () => {
+    const start = () => {
        stop()
         const id = setInterval(() => {
             setDate(new Date());
@@ -86,9 +86,9 @@ function Clock() {
 
                 <div className={s.buttonsContainer}>
                     <SuperButton
-                        id={'hw9-button-Start'}
+                        id={'hw9-button-start'}
                         disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
-                        onClick={Start}
+                        onClick={start}
                     >
                         start
                     </SuperButton>
