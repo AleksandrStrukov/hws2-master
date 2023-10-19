@@ -1,0 +1,27 @@
+.buttonsContainer {
+    background-color: blue;
+    border-radius:  10px;
+    padding: 10px;
+    width: 180px;
+}
+
+.clock {
+    color: #cc0000;
+}
+
+.watch {
+    width: 200px;
+    background-color: coral;
+    padding: 10px;
+    color: blueviolet;
+}
+
+.watch strong {
+    background-color: #00cc22;
+    border-radius:  10px;
+    padding: 10px;
+}
+
+.more {
+
+}
