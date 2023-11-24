@@ -13,12 +13,12 @@ import store from "../hw10/bll/store";
 * 4 - передать пропсы в SuperSelect
 * */
 type themeType = {
-    id:number, value: string
+    id:string, value: string
 }
 const themes:Array<themeType> = [
-    {id: 1, value: 'light'},
-    {id: 2, value: 'blue'},
-    {id: 3, value: 'dark'},
+    {id: '1', value: 'light'},
+    {id:'2', value: 'blue'},
+    {id: '3', value: 'dark'},
 ]
 
 const HW12 = () => {
@@ -27,11 +27,11 @@ const HW12 = () => {
     // взять ид темы из редакса
     const themeId:number = useSelector((state:any) => state.theme.themeId)
 
-    const change = (id: number) => { // дописать функцию
+    const change = (id: string) => { // дописать функцию
         dispatch(changeThemeId(id))
     }
     useEffect(() => {
-        dispatch(changeThemeId(themeId));
+        dispatch(changeThemeId(themeId.toString()));
     }, [dispatch, themeId]);
 
 
