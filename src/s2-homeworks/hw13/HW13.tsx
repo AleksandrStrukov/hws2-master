@@ -53,7 +53,7 @@ const HW13 = () => {
                 } else  if (x === null) {
                     setCode(e.status)
                     setImage(errorUnknown)
-                    setText(e.text)// дописать
+                    setText(e.errorText)// дописать
                     setInfo(e.info)// дописать
                 }
 
