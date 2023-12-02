@@ -47,12 +47,12 @@ const HW13 = () => {
                     setInfo(e.statusText)// дописать
                 } else  if (x === undefined) {
                     setCode('400!')
-                    setImage(errorUnknown)
+                    setImage(error400)
                     setText('400')// дописать
                     setInfo(e.statusText)// дописать
                 } else  if (x === null) {
                     setCode('Error')
-                    setImage(error500)
+                    setImage(errorUnknown)
                     setText('Error')// дописать
                     setInfo(e.statusText)// дописать
                 }
