@@ -34,27 +34,30 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('200!')
+                setCode('Код 200')
                 setImage(success200)
-                setText(res.statusText)// дописать
+                setText(res.data.errorText)// дописать
                 setInfo(res.data.info)
+
             })
             .catch((e) => {
+
                 if (x === false) {
-                    setCode(e.status)
+                    setCode('Ошибка 500')
                     setImage(error500)
-                    setText(e.errorText)// дописать
-                    setInfo(e.info)// дописать
+                    setText(e.response.data.errorText)// дописать
+                    setInfo(e.response.data.info)// дописать
                 } else  if (x === undefined) {
-                    setCode(e.status)
+                    setCode('Ошибка 400')
                     setImage(error400)
-                    setText(e.errorText)// дописать
-                    setInfo(e.info)// дописать
+                    setText(e.response.data.errorText)// дописать
+                    setInfo(e.response.data.info)// дописать
+
                 } else  if (x === null) {
-                    setCode(e.status)
+                    setCode('Ошибка')
                     setImage(errorUnknown)
-                    setText(e.errorText)// дописать
-                    setInfo(e.info)// дописать
+                    setText(e.response.data.errorText)// дописать
+                    setInfo(e.response.data.info)// дописать
                 }
 
             })
