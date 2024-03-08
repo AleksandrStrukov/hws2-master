@@ -1,0 +1,52 @@
+.tech, .developer, .techHeader, .developerHeader, .row, .rowHeader
+{
+    font-size: 14px;
+    margin: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech {
+    width: 60px;
+    font-weight: bold;
+    color: brown;
+
+}
+
+.developer {
+    width: 60px;
+    font-weight: bold;
+    color: darkblue;
+
+}
+
+.techHeader {
+
+    width: 60px;
+    font-weight: bold;
+    color: darkred;
+
+}
+
+.developerHeader {
+    width: 60px;
+    font-weight: bold;
+    color: blue;
+
+}
+
+.row {
+    display: flex;
+
+}
+
+
+
+.loading {
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px
+}

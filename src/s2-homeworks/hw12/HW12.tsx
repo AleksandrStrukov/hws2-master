@@ -12,8 +12,10 @@ import store from "../hw10/bll/store";
 * 3 - дописать тип и логику функции change
 * 4 - передать пропсы в SuperSelect
 * */
+type valueType = string | number
+
 export type themeType = {
-    id: number, value: string
+    id: number, value: valueType
 }
 const themes: Array<themeType> = [
     {id: 1, value: 'light'},
