@@ -51,7 +51,6 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                // делает студент
                 if (res) {
                     setTechs(res.data.techs)
                     setTotalCount(res.data.totalCount)
@@ -81,6 +80,13 @@ const HW15 = () => {
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
+
+    // useEffect(() => {
+    //     const params = { page: page.toString(), count: count.toString(), sort };
+    //     sendQuery(params);
+    //
+    // }, [searchParams]);
+
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
