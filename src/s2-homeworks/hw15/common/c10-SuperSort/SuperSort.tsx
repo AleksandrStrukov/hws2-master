@@ -3,11 +3,6 @@ import { ReactComponent as DownIcon } from './icons/downIcon.svg';
 import { ReactComponent as UpIcon } from './icons/upIcon.svg';
 import { ReactComponent as NoneIcon } from './icons/noneIcon.svg';
 
-// // добавить в проект иконки и импортировать
-// const downIcon = '[\\/]'
-// const upIcon = '[/\\]'
-// const noneIcon = '[--]'
-
 export type SuperSortPropsType = {
     id?: string
     sort: string
@@ -16,9 +11,9 @@ export type SuperSortPropsType = {
 }
 type IconType = FunctionComponent<SVGProps<SVGSVGElement>>
 export const pureChange = (sort: string, down: string, up: string) => {
-    if (sort === '') return down;      // If currently unsorted, sort descending.
-    if (sort === down) return up;      // If currently descending, sort ascending.
-    if (sort === up) return '';        // If currently ascending, clear sort.
+    if (sort === '') return down;
+    if (sort === down) return up;
+    if (sort === up) return '';
     return down;
 }
 

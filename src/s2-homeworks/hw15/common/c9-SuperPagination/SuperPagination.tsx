@@ -11,20 +11,20 @@ export type SuperPaginationPropsType = {
     onChange: (page: number, count: number) => void
 }
 
-const SuperPagination: React.FC<SuperPaginationPropsType> = (
+export const SuperPagination: React.FC<SuperPaginationPropsType> = (
     {
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = Math.ceil(totalCount/itemsCountForPage)
+    const lastPage = Math.ceil(totalCount / itemsCountForPage);
 
-    const onChangeCallback = (event: any, page: number) => {
-        onChange(page, itemsCountForPage)// пишет студент
-    }
+    const onChangeCallback = (event: any, newPage: number) => {
+        onChange(newPage, itemsCountForPage);
+    };
 
-    const onChangeSelect = (event:React.ChangeEvent<{ value: unknown }>) => {
-        const newCount = Number(event.target.value);
-        onChange(1, newCount);
+    const onChangeSelect = (event: React.ChangeEvent<{ value: unknown }>) => {
+        itemsCountForPage = Number(event.target.value);
+        onChange(1, itemsCountForPage)
     }
 
     return (
@@ -71,7 +71,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text2}>
-                строк в таблице
+                itemsCountForPage
             </span>
         </div>
     )
