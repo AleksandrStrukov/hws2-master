@@ -29,13 +29,14 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         onChange(pureChange(sort, down, up))
     }
 
-    const Icon:IconType = sort === down ? DownIcon : sort === up ? UpIcon : NoneIcon;
+    const Icon = sort === down ? DownIcon : sort === up ? UpIcon : NoneIcon;
 
     return (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
+{/*<img id={id + '-icon-' + value}/>*/}
             <Icon/>
         </span>
     )
